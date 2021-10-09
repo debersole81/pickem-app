@@ -1,10 +1,11 @@
+import React from "react";
+import FormFields from "./data/components/FormFields";
 
 function App() {
-
   return (
-    <div>
-      <h1>Pickem-App</h1>
-    </div>
+    <React.Fragment>
+      <FormFields />
+    </React.Fragment>
   );
 }
 
