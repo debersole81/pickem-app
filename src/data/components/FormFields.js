@@ -20,6 +20,7 @@ const FormFields = () => {
       <label htmlFor="awayTeam">Away Team:</label>
       <input type="text" id="awayTeam" name="awayTeam"></input>
       <br />
+      <input type="submit" id="submit"></input>
     </form>
   );
 };
