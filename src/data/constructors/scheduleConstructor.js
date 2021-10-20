@@ -3,13 +3,12 @@ function Week(week, weekId) {
   this.weekId = weekId;
 }
 
-function Game(week, gameId, homeTeam, awayTeam, gameDate, gameTime) {
-  this.week = week;
+function Game(gameId, homeTeam, awayTeam, gameDate, gameTime) {
   this.gameId = gameId;
-  this.homeTeam = homeTeam;
-  this.awayTeam = awayTeam;
   this.gameDate = gameDate;
   this.gameTime = gameTime;
+  this.homeTeam = homeTeam;
+  this.awayTeam = awayTeam;
 }
 
 export { Week, Game };
