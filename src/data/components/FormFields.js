@@ -1,8 +1,9 @@
-import { schedule21 } from "../schedule/scheduleData21.js";
 import { useState } from "react";
+import { schedule21 } from "../schedule/scheduleData21";
+import { Game } from "../constructors/scheduleConstructor";
 
 const initialFormState = {
-  week: 0,
+  week: "",
   gameDate: "",
   gameTime: "",
   homeTeam: "",
@@ -17,9 +18,16 @@ const FormFields = () => {
     setFormState(() => ({ ...formState, [e.target.name]: e.target.value }));
   };
 
-  console.log(formState);
-  console.log(schedule21);
+  /**Form submit handler */
+  const formSubmit = (e) => {
+    e.preventDefault();
 
+    const { week, gameDate, gameTime, homeTeam, awayTeam } = formState;
+
+    //build and import a function here that accepts the formState as params and adds to the schedule21 file
+
+  };
+  
   return (
     <form>
       <label htmlFor="week">Week:</label>
@@ -67,7 +75,12 @@ const FormFields = () => {
         onChange={onChange}
       ></input>
       <br />
-      <input type="submit" id="submit" value="Submit"></input>
+      <input
+        type="submit"
+        id="submit"
+        value="Submit"
+        onClick={formSubmit}
+      ></input>
     </form>
   );
 };
