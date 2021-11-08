@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { schedule21 } from "../schedule/scheduleData21";
-import { Game } from "../constructors/scheduleConstructor";
 
 const initialFormState = {
   week: "",
